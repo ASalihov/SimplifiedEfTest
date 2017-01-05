@@ -13,7 +13,7 @@ namespace SimplifiedEfTest.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201612261346351_first"; }
+            get { return "201612300715417_first"; }
         }
         
         string IMigrationMetadata.Source

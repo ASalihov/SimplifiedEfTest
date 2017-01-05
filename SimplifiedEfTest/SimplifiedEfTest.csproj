@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -54,10 +58,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutomapperConfig.cs" />
     <Compile Include="Context.cs" />
-    <Compile Include="Migrations\201612261346351_first.cs" />
-    <Compile Include="Migrations\201612261346351_first.Designer.cs">
-      <DependentUpon>201612261346351_first.cs</DependentUpon>
+    <Compile Include="DTO\CityData.cs" />
+    <Compile Include="DTO\CountryData.cs" />
+    <Compile Include="Migrations\201612300715417_first.cs" />
+    <Compile Include="Migrations\201612300715417_first.Designer.cs">
+      <DependentUpon>201612300715417_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\City.cs" />
@@ -70,8 +77,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201612261346351_first.resx">
-      <DependentUpon>201612261346351_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612300715417_first.resx">
+      <DependentUpon>201612300715417_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

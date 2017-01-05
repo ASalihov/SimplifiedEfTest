@@ -14,6 +14,8 @@ namespace SimplifiedEfTest.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                         CountryId = c.Int(nullable: false),
+                        Population = c.Int(),
+                        Age = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Countries", t => t.CountryId, cascadeDelete: true)
